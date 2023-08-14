@@ -1,1 +1,1 @@
-json.array! @details, partial: "details/detail", as: :detail
+json.array! @details, partial: 'details/detail', as: :detail
