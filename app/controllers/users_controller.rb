@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
+  
 
   # GET /users or /users.json
   def index
     @users = User.all
+    authorize! :index, @user
   end
 
   # GET /users/1 or /users/1.json
@@ -20,6 +22,7 @@ class UsersController < ApplicationController
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
+    authorize! :create, @user
 
     respond_to do |format|
       if @user.save
