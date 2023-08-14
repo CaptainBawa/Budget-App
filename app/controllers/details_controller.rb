@@ -4,6 +4,7 @@ class DetailsController < ApplicationController
   # GET /details or /details.json
   def index
     @details = Detail.all
+    authorize! :index, @detail
   end
 
   # GET /details/1 or /details/1.json
@@ -20,6 +21,7 @@ class DetailsController < ApplicationController
   # POST /details or /details.json
   def create
     @detail = Detail.new(detail_params)
+    authorize! :create, @detail
 
     respond_to do |format|
       if @detail.save
