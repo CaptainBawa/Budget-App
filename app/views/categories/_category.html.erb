@@ -1,17 +1,23 @@
+<% if @current_owner != category.user %>
+  <p>
+    <strong>Owner:</strong>
+    <%= category.user.name %>
+  </p>
+  <% @current_owner = category.user %>
+<% end %>
+
 <div id="<%= dom_id category %>">
+  <p>
+    <strong>Total:</strong>
+    <%= category.details.sum(:amount) %>
+  </p>
+
   <p>
     <strong>Name:</strong>
     <%= category.name %>
   </p>
 
-  <p>
-    <strong>Icon:</strong>
-    <%= category.icon %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= category.user_id %>
-  </p>
-
+  <div>
+    <img src="<%= category.icon %>" alt="Category Icon" width="100" height="100">
+  </div>
 </div>
