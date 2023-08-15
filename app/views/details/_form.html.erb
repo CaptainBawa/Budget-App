@@ -1,4 +1,4 @@
-<%= form_with(model: detail) do |form| %>
+<%= form_with(model: @detail, url: category_details_path) do |form| %>
   <% if detail.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(detail.errors.count, "error") %> prohibited this detail from being saved:</h2>
@@ -19,11 +19,6 @@
   <div>
     <%= form.label :amount, style: "display: block" %>
     <%= form.text_field :amount %>
-  </div>
-
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
   </div>
 
   <div>
