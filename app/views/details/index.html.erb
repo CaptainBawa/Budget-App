@@ -1,14 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Details</h1>
-
+<h1>Details for <%= @category.name %></h1>
+<p><strong>Total Amount:</strong> <%= number_to_currency(@category.details.sum(:amount)) %></p>
 <div id="details">
-  <% @details.each do |detail| %>
-    <%= render detail %>
-    <p>
-      <%= link_to "Show this detail", detail %>
-    </p>
+  <% if @details.empty? %>
+    <p>No details found for this category.</p>
+  <% else %>
+    <% @details.each do |detail| %>
+      <%= render detail %>
+    <% end %>
   <% end %>
 </div>
+<%= link_to "New Detail", new_category_detail_path(@category) %>
 
-<%= link_to "New detail", new_detail_path %>
