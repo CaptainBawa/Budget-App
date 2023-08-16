@@ -23,6 +23,10 @@ RSpec.describe 'details index page', type: :feature do
     expect(page).to have_content('DETAILS')
   end
 
+  it 'display Add New Transection text' do
+    expect(page).to have_content('Add New Transection')
+  end
+
   it 'calculate the totel' do
     expect(page).to have_content(@category.details.sum(:amount))
   end
