@@ -168,7 +168,7 @@ I'm excited to be working on this project and I would be grateful for your suppo
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank the Microverse full-stack curriculum for the inspiration and guidance.
+I express my gratitude to the Microverse full-stack curriculum for their inspiring guidance, and I extend appreciation to Gregoire Vella(https://www.behance.net/gregoirevella), the Behance artist behind the original design.(https://creativecommons.org/licenses/by-nc/4.0/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
