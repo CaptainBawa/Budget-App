@@ -86,7 +86,6 @@ Example command:
 ```sh
  gem install rails
 ```
-
 ### Setup
 
 Clone this repository to your desired folder:
@@ -95,7 +94,6 @@ Clone this repository to your desired folder:
   cd my-folder
   git clone git@github.com:CaptainBawa/Budget-App.git
 ```
-
 ### Install
 
 Install this project with:
@@ -112,7 +110,6 @@ Install this project with:
 ```sh
   rails db:migrate
 ```
-
 ### Usage
 
 To run the project, execute the following command:
@@ -120,7 +117,6 @@ To run the project, execute the following command:
 ```sh
   rails server
 ```
-
 ### Run tests
 
 To run tests, run the following command:
@@ -128,7 +124,6 @@ To run tests, run the following command:
 ```sh
   rails rspec spec/model/category_test.rb
 ```
-
 ### Deployment
 
 You can deploy this project using:
