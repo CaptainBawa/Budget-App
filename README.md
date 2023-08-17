@@ -69,7 +69,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://ihireanywhere.onrender.com)
+- [Live Demo Link](https://budget-app-e5m0.onrender.com)
 
 - [Presentation Video Link](https://www.loom.com/share/d3e1b1a02d2f4bff92994807bd661c3b)
 
