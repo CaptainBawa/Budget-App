@@ -1,27 +1,36 @@
-<%= form_with(model: category) do |form| %>
-  <% if category.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+<section class="form-container">
+  <nav>
+    <%= link_to raw('&larr;'), new_user_session_path, class: "arrow-link" %>
+      <h2>TRANSECTIONS</h2>
+      <p class="sign-out">
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      </p>
+  </nav>
+  <%= form_with(model: category) do |form| %>
+    <% if category.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
 
-      <ul>
-        <% category.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% category.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <%= form.label :name, style: "display: block" %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :icon_url, style: "display: block" %>
+      <%= form.text_field :icon %>
+    </div>
+
+    <div>
+      <%= form.submit %>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :icon_url, style: "display: block" %>
-    <%= form.text_field :icon %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</section>
