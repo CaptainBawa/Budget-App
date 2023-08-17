@@ -1,0 +1,27 @@
+<section class="form-container">
+  <p style="color: green"><%= notice %></p>
+  <nav>
+    <%= link_to raw('&larr;'), authenticated_root_path, class: "arrow-link" %>
+    <h2>DETAILS</h2>
+    <p class="sign-out">
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    </p>
+  </nav>
+
+  <p class="total-d"><strong>Total Amount:</strong> <%= number_to_currency(@category.details.sum(:amount)) %></p>
+  <div class="trans">
+    <h1>Transections for <%= @category.name %></h1>
+    <div id="details">
+      <% if @details.empty? %>
+        <p>No details found for this category.</p>
+      <% else %>
+        <% @details.each do |detail| %>
+          <%= render detail %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class= "new-cate space">
+    <%= link_to "Add New Transection", new_category_detail_path(@category) %>
+  </div>
+</section>

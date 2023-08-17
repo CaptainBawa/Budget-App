@@ -1,0 +1,19 @@
+<section class="form-container">
+<p style="color: green"><%= notice %></p>
+<nav>
+  <%= link_to raw('&larr;'), new_user_session_path, class: "arrow-link" %>
+    <h2>TRANSECTIONS</h2>
+    <p class="sign-out">
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    </p>
+  </nav>
+
+<div id="categories">
+  <% @categories.each do |category| %>
+    <%= render category %>
+  <% end %>
+</div>
+<div class= "new-cate">
+  <%= link_to "New category", new_category_path %>
+</div>
+</section>

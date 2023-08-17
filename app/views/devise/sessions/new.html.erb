@@ -1,0 +1,22 @@
+<section class="form-container">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <nav>
+  <%= link_to raw('&larr;'), :back, class: "arrow-link" %>
+    <h2>LOGIN</h2>
+    <div>
+      <%= f.submit "Log In" %>
+    </div>
+  </nav>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+  </div>
+<% end %>
+<div class="forget" >
+  <%= link_to "Forgot password?", new_password_path(resource_name) %>
+</div>
+</section>
